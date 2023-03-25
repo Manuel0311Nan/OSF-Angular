@@ -11,7 +11,7 @@ export class DataService {
 
   constructor( private http: HttpClient) {}
 
-  
+
   getAbout(): Observable<About>{
   if(this.cargando){
     return of();
@@ -21,9 +21,9 @@ export class DataService {
   return this.http.get<About>(`${this.baseUrl}`)
   .pipe(
     map((resp) => resp)
-    
+
   )
-  
+  console.log('helo')
   }
 
 

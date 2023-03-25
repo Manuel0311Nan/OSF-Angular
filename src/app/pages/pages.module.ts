@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ShowsComponent } from './shows/shows.component';
 import { SongsComponent } from './songs/songs.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -12,7 +13,8 @@ import { SongsComponent } from './songs/songs.component';
     HomeComponent,
     AboutComponent,
     ShowsComponent,
-    SongsComponent
+    SongsComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule
