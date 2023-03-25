@@ -12,18 +12,16 @@ export class DataService {
   constructor( private http: HttpClient) {}
 
 
-  getAbout(): Observable<About>{
+  getAbout(): Observable<About[]>{
   if(this.cargando){
     return of();
   }
   this.cargando = true;
 
-  return this.http.get<About>(`${this.baseUrl}`)
+  return this.http.get<About[]>(`${this.baseUrl}`)
   .pipe(
     map((resp) => resp)
-
   )
-  console.log('helo')
   }
 
 

@@ -1,0 +1,14 @@
+.aboutInfo{
+  background-color: #080100;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+.about{
+  padding-top: 5em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}

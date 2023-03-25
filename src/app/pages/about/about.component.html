@@ -1,1 +1,45 @@
-<p>about works!</p>
+<section  class="aboutInfo">
+  <!-- Crear interface con galeria de fotos de conciertos -->
+<h1 class="text-center text-light ">One second Faith</h1>
+<div class="about">
+  <div *ngFor="let info of about" class=" col-12 col-lg-2 m-1">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <img
+        src="{{ info.image }}"
+        alt="{{ info.name }}"
+        class="card-img-top rounded-2  w-100"
+      />
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h2>
+    {{ info.name }}
+  </h2>
+      <h6>{{ info.city }}</h6>
+      <h6>{{ info.instrument }}</h6>
+      <h6>{{ info.date }}</h6>
+
+    </div>
+  </div>
+  </div>
+  </div>
+<div class="about">
+  <div *ngFor="let info of about" class=" col-12 col-lg-2 m-1">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <img
+        src="{{ info.image }}"
+        alt="{{ info.name }}"
+        class="card-img-top rounded-2  w-100"
+      />
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h2>
+    {{ info.name }}
+  </h2>
+      <h6>{{ info.city }}</h6>
+      <h6>{{ info.instrument }}</h6>
+      <h6>{{ info.date }}</h6>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+</section>
