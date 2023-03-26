@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DateComparePipe } from './date-compare.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DateComparePipe
+  ],
+  exports: [
+    DateComparePipe
+  ],
   imports: [
     CommonModule
   ]

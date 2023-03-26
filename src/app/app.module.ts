@@ -1,3 +1,4 @@
+import { PipesModule } from './pipes/pipes.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
@@ -12,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
+
 
   ],
   imports: [
