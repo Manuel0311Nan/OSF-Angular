@@ -1,51 +1,37 @@
 <section class="aboutInfo">
   <!-- Crear interface con galeria de fotos de conciertos -->
+
+  <!-- ? Preguntar por que no coge la fecha completa y si un valor determinado para comparar -->
   <h1 class="text-center text-light">Próximos conciertos</h1>
   <div class="about">
-
-    <div *ngFor="let sho of show" ngIf="25/03/2022 < getFechaActualString"   class="col-5 col-lg-2 m-1">
-      <div *ngIf="25/03/2022 < 26/03/2022"
-        class="d-flex flex-column justify-content-center align-items-center"
-      >
+    <ng-container *ngFor="let sho of show" >
+      <div class="col-8 col-lg-2 m-1">
+      <ng-container
+        *ngIf="sho.date[9] >= fechaActualString[8]"
+        class="d-flex flex-column justify-content-center align-items-center">
         <img
           src="{{ sho.image }}"
           alt="{{ sho.nameLocal }}"
           class="card-img-top rounded-2 w-100"
         />
-        <div
-          class="d-flex flex-column justify-content-center align-items-center"
-        >
-          <h2>
-            {{ sho.date }}
-          </h2>
-          <h2>
-            {{ getFechaActualString }}
-          </h2>
-        </div>
+      </ng-container>
       </div>
-    </div>
+    </ng-container>
   </div>
   <h1 class="text-center text-light">Anteriores conciertos</h1>
   <div class="about">
-    <div *ngFor="let sho of show" ngIf="25/03/2022 > getFechaActual"   class="col-5 col-lg-2 m-1">
-      <div
-
-        class="d-flex flex-column justify-content-center align-items-center"
-      >
+    <ng-container *ngFor="let sho of show" >
+      <div class="col-8 col-lg-2 m-1">
+      <ng-container
+        *ngIf="sho.date[9] < fechaActualString[8]"
+        class="d-flex flex-column justify-content-center align-items-center">
         <img
           src="{{ sho.image }}"
           alt="{{ sho.nameLocal }}"
           class="card-img-top rounded-2 w-100"
         />
-        <div
-          class="d-flex flex-column justify-content-center align-items-center"
-        >
-          <h2>
-            {{ sho.date }}
-          </h2>
-        </div>
+      </ng-container>
       </div>
-    </div>
+    </ng-container>
   </div>
 </section>
-

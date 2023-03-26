@@ -2,7 +2,9 @@
 export interface Shows {
   nameLocal:   string;
   city:        string;
-  group1:      string;
+  group1: string;
+  group2: string;
+  group3:      string;
   date:        string;
   image:       string;
   coordinates: number[];
