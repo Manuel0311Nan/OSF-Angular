@@ -27,4 +27,21 @@
   border-radius: 5px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+
+
+}
+@media (max-width: 600px) {
+  .textAbout {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    opacity: 5;
+    padding: 0.5em;
+    color: rgb(12, 12, 12);
+    background-color: rgba(252, 249, 249, 0.7);
+  }
+  .imgDark:hover {
+    filter: grayscale(0);
+  }
+
 }
