@@ -1,4 +1,4 @@
-import { PipesModule } from './pipes/pipes.module';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
@@ -7,8 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     ComponentsModule,
     PagesModule,
-    HttpClientModule
+    HttpClientModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
