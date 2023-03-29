@@ -6,9 +6,9 @@
   />
   <form className="col-10 col-lg-7 p-auto mx-auto my-lg-auto my-4 " (submit)="sendEmail($event)">
     <div className="d-flex flex-column justify-content-center text-danger ">
-      <h2 class="text-center text-light">
-          Formulario de contacto
-      </h2>
+      <h5 class="text-center text-light">
+          Cuentanos tu experiencia con OSF
+      </h5>
     </div>
     <div class="d-flex">
       <input
@@ -32,11 +32,11 @@
 
     <textarea
       type="text"
-      rows="{4}"
       class="form-control"
       name="InputMessage"
       id="InputMessage"
-      placeholder="Mensaje"
+      placeholder="Experiencia"
+      required
     >
     </textarea>
     <p class="text-center text-light">
