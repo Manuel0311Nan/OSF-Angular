@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes/pipes.module';
 import { AboutOSFComponent } from './about-osf/about-osf.component';
+import { PhotoConcertsComponent } from './photo-concerts/photo-concerts.component';
 
 
 
@@ -12,7 +13,8 @@ import { AboutOSFComponent } from './about-osf/about-osf.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    AboutOSFComponent
+    AboutOSFComponent,
+    PhotoConcertsComponent
   ],
   exports: [
     HeaderComponent,
