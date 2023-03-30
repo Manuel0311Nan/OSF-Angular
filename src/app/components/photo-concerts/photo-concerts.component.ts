@@ -18,7 +18,6 @@ export class PhotoConcertsComponent implements OnInit, AfterViewInit {
     this.mySwiper = new Swiper('.swiper-container', {
       loop: true,
 
-
 })
   }
   ngOnInit(): void {
