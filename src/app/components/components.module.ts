@@ -19,7 +19,8 @@ import { PhotoConcertsComponent } from './photo-concerts/photo-concerts.componen
   exports: [
     HeaderComponent,
     FooterComponent,
-    AboutOSFComponent
+    AboutOSFComponent,
+    PhotoConcertsComponent
   ],
   imports: [
     CommonModule,

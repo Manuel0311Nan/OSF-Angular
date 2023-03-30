@@ -1,3 +1,4 @@
+import { Photo } from './../interfaces/Photo-Interface';
 import { Shows } from './../interfaces/Show-Interface';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -33,6 +34,18 @@ export class DataService {
     return this.http.get<Shows[]>(`${this.baseUrl}/shows`)
     .pipe(
       map((resp) => resp)
+      )
+  }
+  getPhoto(): Observable<Photo[]>{
+    if(this.cargando){
+      return of();
+    }
+    this.cargando = true;
+
+    return this.http.get<Photo[]>(`${this.baseUrl}/photos`)
+    .pipe(
+      map((resp) => resp)
+
       )
     }
 

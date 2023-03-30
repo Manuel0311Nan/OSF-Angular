@@ -1,1 +1,22 @@
-<p>photo-concerts works!</p>
+<div
+  class="swiper-container swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+>
+  <div class="swiper-wrapper">
+    <div *ngFor="let photo of photos" class="swiper-slide"
+    [ngStyle]="{
+      'background-size': 'cover',
+      'background-position': 'center'
+  }">
+      <div class="">
+  <img src="{{photo.image}}" alt="{{photo.city}}">
+  <p class="text-light">{{photo.city}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+  <div (click)="onSlideNext()" class="swiper-button-next"></div>
+</div>
