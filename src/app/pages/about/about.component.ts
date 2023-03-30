@@ -1,8 +1,8 @@
 import { Photo } from './../../interfaces/Photo-Interface';
 import { DataService } from './../../services/data.service';
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { About } from 'src/app/interfaces/About-Interface';
+import { Component, OnInit, OnDestroy , HostListener} from '@angular/core';
 import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -10,29 +10,36 @@ import { Subscription } from 'rxjs';
 })
 export class AboutComponent implements OnInit, OnDestroy {
 
-  public about: About[] = [];
-  public photo: Photo[] = [];
 
-  aboutSubscription: Subscription;
+  public photo: Photo[] = [];
   photoSubscription: Subscription;
 
+
+  @HostListener('window:scroll', ['event'])
+  onScroll() {
+    const pos = (document.documentElement.scrollTop || document.body.scrollTop) + 1300;
+    const max = (document.documentElement.scrollHeight || document.body.scrollHeight)
+
+    if (pos > max) {
+      if (this.photoService.cargando) { return; }
+      this.photoService.getPhoto().subscribe(photos => {
+        this.photo.push(...photos);
+
+      })
+    }
+    }
   constructor(
-    private aboutService: DataService,
     private photoService: DataService
   ) {}
 
   ngOnInit(): void {
-    this.aboutSubscription = this.aboutService.getAbout()
-      .subscribe(info => {
-        this.about = info;
-      });
+
     this.photoSubscription = this.photoService.getPhoto()
       .subscribe(photos => {
         this.photo = photos;
       });
   }
   ngOnDestroy(): void {
-    this.aboutSubscription.unsubscribe();
     this.photoSubscription.unsubscribe();
   }
   }

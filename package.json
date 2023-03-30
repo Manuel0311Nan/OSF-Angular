@@ -20,6 +20,7 @@
     "@angular/router": "^15.1.0",
     "@angular/youtube-player": "^15.2.4",
     "@emailjs/browser": "^3.10.0",
+    "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
     "emailjs": "^4.0.1",
     "rxjs": "~7.8.0",
