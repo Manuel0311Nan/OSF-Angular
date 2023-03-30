@@ -1,5 +1,5 @@
-import {  Component, Input, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import Swiper from 'swiper'
 import { Photo } from 'src/app/interfaces/Photo-Interface';
 
 
@@ -8,11 +8,27 @@ import { Photo } from 'src/app/interfaces/Photo-Interface';
   templateUrl: './photo-concerts.component.html',
   styleUrls: ['./photo-concerts.component.css']
 })
-export class PhotoConcertsComponent implements OnInit {
+export class PhotoConcertsComponent implements OnInit, AfterViewInit {
   @Input()
   photos: Photo[] = [];
+  public mySwiper!: Swiper;
 
+
+  ngAfterViewInit(): void {
+    this.mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+
+
+})
+  }
   ngOnInit(): void {
+
+  }
+  onSlideNext(){
+    this.mySwiper.slideNext();
   }
 
+  onSlidePrev(){
+    this.mySwiper.slidePrev();
+  }
 }

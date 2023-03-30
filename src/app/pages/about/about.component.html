@@ -22,8 +22,14 @@
     la batería. Ahora la banda esta trabajando en el lanzamiento de su próximo
     EP "Awakening" que será lanzado en el verano de 2022.
   </p>
-    <div class="about">
+  <div class="d-flex flex-column">
+    <div class="row mt-3" *ngIf="photo.length > 0">
+    <div class="col">
       <app-photo-concerts [photos] = "photo" ></app-photo-concerts>
+    </div>
+  </div>
+    <div class="about">
+    </div>
   </div>
 </div>
 </section>
