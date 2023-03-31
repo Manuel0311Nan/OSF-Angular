@@ -5,7 +5,7 @@ export interface Shows {
   group1: string;
   group2: string;
   group3:      string;
-  date:        string;
+  date:        Date;
   image:       string;
   coordinates: number[];
   _id:         string;

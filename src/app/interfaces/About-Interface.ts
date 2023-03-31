@@ -3,7 +3,7 @@ export interface About {
     name:       string;
     city:       string;
     instrument: string;
-    date:       string;
+    date:       Date;
     image:      string;
     createdAt:  Date;
     updatedAt:  Date;

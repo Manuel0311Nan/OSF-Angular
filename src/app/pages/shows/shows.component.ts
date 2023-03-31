@@ -11,8 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ShowsComponent implements OnInit{
 
   public show: Shows[] = [];
-  public fechaActualString: String = new Date().toLocaleDateString();
-
+  public fechaActualString: Date = new Date();
 
   constructor(private showService: DataService) {
 
@@ -23,12 +22,25 @@ export class ShowsComponent implements OnInit{
     this.showService.getShows()
       .subscribe(infoShows => {
         this.show = infoShows;
-        this.fechaActualString = this.fechaActualString
-        console.log(this.show)
-        console.log(typeof(this.fechaActualString))
-      })
 
+
+        console.log(this.fechaActualString)
+      })
+    // this.showService.getShows().subscribe(
+    //   (data: Shows[]) => {
+    //     this.show = data;
+    //     const fechaActual = new Date();
+    //     this.show = this.show.filter((sho) => {
+    //       const showDate = new Date(sho.date);
+    //       return showDate.getTime() >= fechaActual.getTime();
+    //     });
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   }
+
 
 
 }

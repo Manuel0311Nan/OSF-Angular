@@ -1,36 +1,32 @@
 <section class="aboutInfo" >
   <!-- Crear interface con galeria de fotos de conciertos -->
   <!-- ? Preguntar por que no coge la fecha completa y si un valor determinado para comparar -->
-  <h1 class="text-center text-light">Próximos conciertos</h1>
+  <!-- <h1 class="text-center text-light">Próximos conciertos</h1> -->
+  <h1 class="text-center text-light">Conciertos</h1>
+  <div class="about">
+    <ng-container *ngFor="let sho of show | orderBy: 'date'">
+  <div *ngIf=" sho" class="col-8 col-lg-2 m-1">
+    <div class="d-flex flex-column justify-content-center align-items-center animate__animated animate__zoomIn">
+      <ng-container>
+        <img src="{{ sho.image }}" alt="{{ sho.nameLocal }}" class="card-img-top rounded-2 w-100" />
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+
+
+  </div>
+  <!-- <h1 class="text-center text-light">Anteriores conciertos</h1>
   <div class="about">
     <ng-container *ngFor="let sho of show" >
-      <div class="col-8 col-lg-2 m-1">
-      <ng-container
-        *ngIf="sho.date[9] >= fechaActualString[8]"
-        class="d-flex flex-column justify-content-center align-items-center">
-        <img
-          src="{{ sho.image }}"
-          alt="{{ sho.nameLocal }}"
-          class="card-img-top rounded-2 w-100"
-        />
-      </ng-container>
+      <div *ngIf="sho.date"class="col-8 col-lg-2 m-1">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <ng-container>
+            <img src="{{ sho.image }}" alt="{{ sho.nameLocal }}" class="card-img-top rounded-2 w-100" />
+          </ng-container>
+        </div>
       </div>
     </ng-container>
-  </div>
-  <h1 class="text-center text-light">Anteriores conciertos</h1>
-  <div class="about">
-    <ng-container *ngFor="let sho of show" >
-      <div class="col-8 col-lg-2 m-1">
-      <ng-container
-        *ngIf="sho.date[9] < fechaActualString[8]"
-        class="d-flex flex-column justify-content-center align-items-center">
-        <img
-          src="{{ sho.image }}"
-          alt="{{ sho.nameLocal }}"
-          class="card-img-top rounded-2 w-100"
-        />
-      </ng-container>
-      </div>
-    </ng-container>
-  </div>
+
+  </div> -->
 </section>

@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DateComparePipe } from './date-compare.pipe';
+import { OrderByPipe } from './order-by.pipe';
 
 
 
 @NgModule({
   declarations: [
-    DateComparePipe
+    DateComparePipe,
+    OrderByPipe
   ],
   exports: [
-    DateComparePipe
+    DateComparePipe,
+    OrderByPipe
   ],
   imports: [
     CommonModule

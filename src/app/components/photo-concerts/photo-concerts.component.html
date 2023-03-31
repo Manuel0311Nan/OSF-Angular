@@ -1,6 +1,6 @@
 
 
-<div class="swiper-container swiper mySwiper swiper-initialized swiper-horizontal">
+<!-- <div class="swiper-container swiper mySwiper swiper-initialized swiper-horizontal">
   <div class="swiper-wrapper ">
     <div  *ngFor="let photo of photos" class="swiper-slide align-items-center"
     >
@@ -16,20 +16,21 @@
   </div>
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
+
   <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
   <div (click)="onSlideNext()" class="swiper-button-next"></div>
-</div>
+</div> -->
 
 
 <div class="d-flex flex-wrap justify-content-center align-items-center">
-  <div *ngFor="let photo of photos">
+  <div *ngFor="let photo of photos" class="">
     <img
       [src]="photo.image"
-      class=" col-2 img-fluid poster p-2 imgSmall"
+      class=" col-2 img-fluid poster p-2 imgSmall animate__animated animate__zoomIn"
     />
-      <div class="col-12 text-white text-center">
+      <div class="col-12 text-white text-center ">
         {{ photo.city}}
       </div>
   </div>
 </div>
+

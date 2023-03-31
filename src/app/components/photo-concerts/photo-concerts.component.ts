@@ -2,7 +2,6 @@ import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper'
 import { Photo } from 'src/app/interfaces/Photo-Interface';
 
-
 @Component({
   selector: 'app-photo-concerts',
   templateUrl: './photo-concerts.component.html',
@@ -18,7 +17,7 @@ export class PhotoConcertsComponent implements OnInit, AfterViewInit {
     this.mySwiper = new Swiper('.swiper-container', {
       loop: true,
 
-})
+    })
   }
   ngOnInit(): void {
 
