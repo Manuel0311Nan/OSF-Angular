@@ -1,13 +1,13 @@
 export interface About {
-    _id:        string;
-    name:       string;
-    city:       string;
-    instrument: string;
+    _id:        String;
+    name:       String;
+    city:       String;
+    instrument: String;
     date:       Date;
-    image:      string;
+    image:      String;
     createdAt:  Date;
     updatedAt:  Date;
-    __v:        number;
+    __v:        Number;
 }
 
 // Converts JSON strings to/from your types

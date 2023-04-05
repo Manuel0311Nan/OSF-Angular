@@ -1,9 +1,9 @@
 export interface Photo {
-  _id:        string;
-  city:       string;
+  _id:        String;
+  city:       String;
   date:       Date;
-  image:      string;
+  image:      String;
   createdAt:  Date;
   updatedAt:  Date;
-  __v:        number;
+  __v:        Number;
 }

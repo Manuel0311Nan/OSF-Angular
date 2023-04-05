@@ -19,7 +19,6 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     PagesModule,
     HttpClientModule,
     YouTubePlayerModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

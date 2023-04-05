@@ -1,15 +1,15 @@
 
 export interface Shows {
-  nameLocal:   string;
-  city:        string;
-  group1: string;
-  group2: string;
-  group3:      string;
+  nameLocal:   String;
+  city:        String;
+  group1: String;
+  group2: String;
+  group3:      String;
   date:        Date;
-  image:       string;
-  coordinates: number[];
-  _id:         string;
+  image:       String;
+  coordinates: Number[];
+  _id:         String;
   createdAt:   Date;
   updatedAt:   Date;
-  __v:         number;
+  __v:         Number;
 }
