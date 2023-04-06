@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { About } from 'src/app/interfaces/About-Interface';
 import { DataService } from 'src/app/services/data.service';
@@ -12,11 +12,15 @@ export class HomeComponent {
   public about: About[] = [];
 
   aboutSubscription: Subscription;
-
+  @ViewChild('miVideo') miVideo: any;
 
   constructor(
     private aboutService: DataService,
-  ) {}
+  ) {
+  }
+  ngAfterViewInit() {
+    this.establecerVolumen();
+  }
 
   ngOnInit(): void {
     this.aboutSubscription = this.aboutService.getAbout()
@@ -30,4 +34,7 @@ export class HomeComponent {
 
   }
 
+  establecerVolumen() {
+    this.miVideo.nativeElement.volume = 0.2;
+  }
 }

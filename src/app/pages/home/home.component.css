@@ -45,3 +45,13 @@
   }
 
 }
+.entradasLink{
+  background-color: #080100;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  transition: ease-in-out .3s;
+  border-radius: 5px;
+}
+.entradasLink:hover{
+  background-color: brown;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
