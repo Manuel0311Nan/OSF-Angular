@@ -1,20 +1,29 @@
-<!-- <div>
-  <div *ngFor="let album of albums">
-    <h1>{{cancion[0]}}</h1>
-  </div>
-</div> -->
 <section class="songsInfo">
+  <h1 class="text-center text-light">
+    Albums One Second Faith
+    <a href="https://open.spotify.com/artist/6tFCiZQRje5CSFkkt4sQ7D" target="_blank"
+      ><i class="fa-brands fa-spotify logoSpoti"></i
+    ></a>
+  </h1>
   <div class="container">
-  <div class="row">
-    <div class="text-light col-6">
-      <h1 class="text-center">Titulo 1</h1>
-<img src="" alt="">
-    </div>
-    <div class="text-light col-6">
-       <h1 class="text-center">Titulo 2</h1>
-       <img src="" alt="">
+    <div *ngFor="let album of albums" class="text-light p-3">
+      <div
+        class="d-flex flex-column flex-lg-row justify-content-center align-items-center"
+      >
+        <div class="col-3 mx-3">
+          <h1 class="text-center">{{ album.name }}</h1>
+          <h1 class="text-center">{{ album.date }}</h1>
+        </div>
+        <img src="{{ album.image }}" class="col-6 col-lg-3" alt="" />
+        <ul class="mx-3 my-2 col-3">
+          <li>{{ album.songs[0] }}</li>
+          <li>{{ album.songs[1] }}</li>
+          <li>{{ album.songs[2] }}</li>
+          <li>{{ album.songs[3] }}</li>
+          <li>{{ album.songs[4] }}</li>
+          <li>{{ album.songs[5] }}</li>
+        </ul>
       </div>
+    </div>
   </div>
-</div>
 </section>
-

@@ -1,3 +1,5 @@
+import { DataService } from 'src/app/services/data.service';
+import { Album } from './../../interfaces/Album-Interface';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongsComponent implements OnInit {
 
-  constructor(
-  ) {
+  public albums: Album[] = [];
 
-}
+  constructor(private albumService: DataService
+  ) {}
 
 ngOnInit(): void {
+  this.albumService.getAlbum()
+  .subscribe(infoAlbum => {
+    this.albums = infoAlbum;
 
+
+  })
 }
 }
 

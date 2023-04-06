@@ -1,8 +1,8 @@
 
 export interface Album {
   name: String;
-  date: Date;
+  date: Number;
   songs: String[];
-  imgae: String;
+  image: String;
 }
 

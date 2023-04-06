@@ -1,3 +1,4 @@
+import { Album } from './../interfaces/Album-Interface';
 import { Photo } from './../interfaces/Photo-Interface';
 import { Shows } from './../interfaces/Show-Interface';
 import { Injectable } from '@angular/core';
@@ -13,7 +14,7 @@ export class DataService {
 
   constructor( private http: HttpClient) {}
 
-
+  //!---------------------------Observable para la información del grupo
   getAbout(): Observable<About[]>{
   if(this.cargando){
     return of();
@@ -25,6 +26,8 @@ export class DataService {
     map((resp) => resp)
     )
   }
+
+  //!---------------------------Observable para los conciertos
   getShows(): Observable<Shows[]>{
     if(this.cargando){
       return of();
@@ -36,6 +39,7 @@ export class DataService {
       map((resp) => resp)
       )
   }
+    //!----------------------------Observable para los conciertos
   getPhoto(): Observable<Photo[]>{
     if(this.cargando){
       return of();
@@ -47,7 +51,22 @@ export class DataService {
       map((resp) => resp)
 
       )
+  }
+
+      //!----------------------------Observable para los albums
+  getAlbum(): Observable<Album[]>{
+    if(this.cargando){
+      return of();
     }
+    this.cargando = true;
+
+    return this.http.get<Album[]>(`${this.baseUrl}/albums`)
+    .pipe(
+      map((resp) => resp)
+
+      )
+  }
+
 
 
 }
