@@ -1,54 +1,61 @@
-<div class="d-flex flex-column flex-lg-row justify-content-center align-items-center contact">
+<div
+  class="d-flex flex-column flex-lg-row justify-content-center align-items-center contact animate__animated animate__fadeIn animate__delay-.4s"
+>
   <img
-    class="w-75 rounded-1 my-2"
+    class="w-75 rounded-1 m-2 animate__animated animate__backInDown animate__delay-.6s"
     src="https://res.cloudinary.com/manuelcodex/image/upload/v1679765315/conciertos/OSFNueva_o4pelt.jpg"
     alt="imagenFondocontacto"
   />
-  <form className="col-10 col-lg-7 p-auto mx-auto my-lg-auto my-4 " (submit)="sendEmail($event)">
+  <form
+    className="col-10 col-lg-7 p-auto mx-auto my-lg-auto my-4 "
+    (submit)="sendEmail($event)"
+  >
     <div className="d-flex flex-column justify-content-center text-danger ">
       <h5 class="text-center text-light">
-          Cuentanos tu experiencia con OSF
+        Queremos estar cerca de vosotros y saber hasta donde debemos llegar con
+        nuestra música
       </h5>
+      <h5 class="text-center text-light">Habla con One Second Faith</h5>
     </div>
-    <div class="d-flex">
+    <div
+      class="col-11 d-flex flex-column m-auto"
+    >
       <input
         type="text"
-        class="form-control  mb-2"
+        class="form-control mb-2"
         name="InputName"
         id="InputName"
         placeholder="Nombre"
         required
       />
-    </div>
-
-    <input
-      type="email"
-      class="form-control mb-2 w-100 mx-auto"
-      name="InputEmail"
-      id="InputEmail"
-      placeholder="email@example.com"
-      required
-    />
-
-    <textarea
-      type="text"
-      class="form-control"
-      name="InputMessage"
-      id="InputMessage"
-      placeholder="Experiencia"
-      required
-    >
-    </textarea>
-    <p class="text-center text-light">
-      <small>
-        * Si no recibe un mensaje de confirmación a su correo en las próximas 24
-        horas, por favor, envíe otro email</small
+      <input
+        type="email"
+        class="form-control mb-2 w-100 mx-auto"
+        name="InputEmail"
+        id="InputEmail"
+        placeholder="email@example.com"
+        required
+      />
+      <textarea
+        type="text"
+        class="form-control"
+        name="InputMessage"
+        id="InputMessage"
+        placeholder="Experiencia"
+        required
       >
-    </p>
-    <div class="d-flex flex-direction justify-content-center p-1">
-      <button class="btn btn-dark text-light w-100 w-lg-50">
-        <span class="fontHLIB">Enviar</span>
-      </button>
+      </textarea>
+      <p class="text-center text-light">
+        <small>
+          * Si no recibe un mensaje de confirmación a su correo en las próximas
+          24 horas, por favor, envíe otro email</small
+        >
+      </p>
+      <div class="d-flex flex-direction justify-content-center p-1">
+        <button class="btn btn-dark text-light w-100 w-lg-50">
+          <span class="fontHLIB">Enviar</span>
+        </button>
+      </div>
     </div>
   </form>
 </div>
