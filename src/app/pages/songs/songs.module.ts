@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/shared.module';
 import { SongsComponent } from './songs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,8 @@ import { Router, RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    SongsRoutingModule
+    SongsRoutingModule,
+    SharedModule
   ]
 })
 export class SongsModule { }
