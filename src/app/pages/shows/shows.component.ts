@@ -1,7 +1,7 @@
 import { DataService } from './../../services/data.service';
 import { Shows } from './../../interfaces/Show-Interface';
 import { Component, OnInit } from '@angular/core';
-
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-shows',
@@ -11,34 +11,18 @@ import { Component, OnInit } from '@angular/core';
 export class ShowsComponent implements OnInit{
 
   public show: Shows[] = [];
-  public fechaActualString: Date = new Date();
+  public fechaActual: String;
 
   constructor(private showService: DataService) {
 
    }
-
   ngOnInit(): void {
 
     this.showService.getShows()
       .subscribe(infoShows => {
         this.show = infoShows;
-
-
-        console.log(this.fechaActualString)
+        this.fechaActual = moment().format();
       })
-    // this.showService.getShows().subscribe(
-    //   (data: Shows[]) => {
-    //     this.show = data;
-    //     const fechaActual = new Date();
-    //     this.show = this.show.filter((sho) => {
-    //       const showDate = new Date(sho.date);
-    //       return showDate.getTime() >= fechaActual.getTime();
-    //     });
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
   }
 
 

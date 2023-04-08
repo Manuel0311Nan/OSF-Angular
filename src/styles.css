@@ -59,11 +59,7 @@
   transform: rotate(0.5turn);
   transition: 0.5s ease-in-out;
 }
-.home {
-width: 100%;
-  background-color: #080100;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-}
+
 .video {
   filter: opacity(70%);
   width: 100%;
