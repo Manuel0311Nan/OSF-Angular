@@ -5,16 +5,16 @@
   <h1 class="text-center text-light">Próximos conciertos</h1>
   <div class="about">
     <ng-container *ngFor="let sho of show | orderBy : 'date'">
-      <div *ngIf="sho.date > fechaActual" class="col-8 col-lg-1 m-1">
+      <div *ngIf="sho.date > fechaActual" class="col-8 col-lg-2 m-1">
         <div
           class="d-flex flex-column justify-content-center align-items-center animate__animated animate__zoomIn"
         >
           <ng-container>
-            <a href="https://www.songkick.com/artists/9935844-one-second-faith" class="text-decoration-none" target="_blank"> <img
+            <a href="https://www.songkick.com/artists/9935844-one-second-faith" class="text-decoration-none imgLink imgDark proxShowCard" target="_blank"> <img
               src="{{ sho.image }}"
               alt="{{ sho.nameLocal }}"
-              class="card-img-top rounded-2 w-100 proxShowCard"
-            /></a>
+              class="card-img-top rounded-2 w-100"
+            /><span class="textAbout ">Compra ya tus entradas</span></a>
 
 
           </ng-container>

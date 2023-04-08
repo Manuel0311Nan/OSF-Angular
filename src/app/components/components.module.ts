@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes/pipes.module';
 import { AboutOSFComponent } from './about-osf/about-osf.component';
 import { PhotoConcertsComponent } from './photo-concerts/photo-concerts.component';
+import { NewsComponent } from './news/news.component';
 
 
 
@@ -14,7 +15,8 @@ import { PhotoConcertsComponent } from './photo-concerts/photo-concerts.componen
     HeaderComponent,
     FooterComponent,
     AboutOSFComponent,
-    PhotoConcertsComponent
+    PhotoConcertsComponent,
+    NewsComponent
   ],
   exports: [
     HeaderComponent,

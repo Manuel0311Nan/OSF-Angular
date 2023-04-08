@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { About } from '../interfaces/About-Interface';
 import {Observable, of,  map, catchError} from "rxjs";
+import { News } from '../interfaces/News-Interface';
 @Injectable({
   providedIn: 'root',
 })
@@ -66,6 +67,19 @@ export class DataService {
 
       )
   }
+        //!----------------------------Observable para los albums
+        getNews(): Observable<News[]>{
+          if(this.cargando){
+            return of();
+          }
+          this.cargando = true;
+
+          return this.http.get<News[]>(`${this.baseUrl}/news`)
+          .pipe(
+            map((resp) => resp)
+
+            )
+        }
 
 
 
