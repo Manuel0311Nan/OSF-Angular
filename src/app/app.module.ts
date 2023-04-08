@@ -1,24 +1,33 @@
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { SongsComponent } from './pages/songs/songs.component';
+import { ShowsComponent } from './pages/shows/shows.component';
+import { FooterComponent } from './core/components/footer/footer.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NgModule } from '@angular/core';
+
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { PagesModule } from './pages/pages.module';
-import { ComponentsModule } from './components/components.module';
-import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentsModule,
-    PagesModule,
     HttpClientModule,
-    YouTubePlayerModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
