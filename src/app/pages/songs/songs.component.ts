@@ -1,4 +1,4 @@
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/core/services/data.service';
 import { Album } from './../../interfaces/Album-Interface';
 
 import { Component, OnInit } from '@angular/core';

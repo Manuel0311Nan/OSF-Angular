@@ -1,5 +1,5 @@
 import { Photo } from './../../interfaces/Photo-Interface';
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../core/services/data.service';
 import { Component, OnInit, OnDestroy , HostListener} from '@angular/core';
 import { Subscription } from 'rxjs';
 

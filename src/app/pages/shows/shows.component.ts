@@ -1,4 +1,4 @@
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../core/services/data.service';
 import { Shows } from './../../interfaces/Show-Interface';
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';

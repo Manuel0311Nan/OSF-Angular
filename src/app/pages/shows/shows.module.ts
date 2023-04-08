@@ -1,16 +1,19 @@
+import { ShowsComponent } from './shows.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ShowsRoutingModule } from './shows-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ShowsComponent],
   imports: [
     CommonModule,
     RouterModule,
-    ShowsRoutingModule
+    ShowsRoutingModule,
+    SharedModule
   ]
 })
 export class ShowsModule { }

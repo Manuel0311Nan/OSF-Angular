@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { About } from 'src/app/interfaces/About-Interface';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/core/services/data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
