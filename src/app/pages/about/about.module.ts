@@ -1,3 +1,4 @@
+import { LoginComponent } from './../login/login.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AboutComponent } from './about.component';
 import { SharedModule } from './../../shared/shared.module';

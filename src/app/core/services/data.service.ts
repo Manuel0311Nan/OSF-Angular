@@ -50,8 +50,13 @@ export class DataService {
     return this.http.get<Photo[]>(`${this.baseUrl}/photos`)
     .pipe(
       map((resp) => resp)
-
       )
+  }
+  getPhotoById(id: string) {
+    return this.http.get<Photo[]>(`${this.baseUrl}/photos/${id}`)
+      .pipe(
+        map(resp => resp)
+      );
   }
 
       //!----------------------------Observable para los albums

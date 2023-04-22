@@ -1,5 +1,5 @@
 export interface Photo {
-  _id:        String;
+  _id:        string;
   city:       String;
   date:       Date;
   image:      String;

@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper'
+import { ModalServiceService } from './../../services/modal-service.service';
+import { DataService } from 'src/app/core/services/data.service';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Photo } from 'src/app/interfaces/Photo-Interface';
 
 @Component({
@@ -7,27 +9,17 @@ import { Photo } from 'src/app/interfaces/Photo-Interface';
   templateUrl: './photo-concerts.component.html',
   styleUrls: ['./photo-concerts.component.css']
 })
-export class PhotoConcertsComponent implements OnInit, AfterViewInit {
+export class PhotoConcertsComponent implements OnInit {
 
-  @Input()
-  photos: Photo[] = [];
-  public mySwiper!: Swiper;
+  public photo: Photo[] = [];
 
-
-  ngAfterViewInit(): void {
-    this.mySwiper = new Swiper('.swiper-container', {
-      loop: true,
-
-    })
+  constructor(private modalService: ModalServiceService
+  ) {
   }
-  ngOnInit(): void {
+    ngOnInit(): void {
 
-  }
-  onSlideNext(){
-    this.mySwiper.slideNext();
-  }
-
-  onSlidePrev(){
-    this.mySwiper.slidePrev();
-  }
+    }
+  closeModal() {
+  this.modalService.$modal.emit(false)
+}
 }
