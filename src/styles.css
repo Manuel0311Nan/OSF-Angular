@@ -277,3 +277,6 @@ cursor:pointer;
     animation: scroll 100s linear 4s forwards;
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

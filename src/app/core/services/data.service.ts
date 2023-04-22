@@ -4,7 +4,7 @@ import { Shows } from '../../interfaces/Show-Interface';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { About } from '../../interfaces/About-Interface';
-import {Observable, of,  map, catchError} from "rxjs";
+import {Observable, of,  map, delay} from "rxjs";
 import { News } from '../../interfaces/News-Interface';
 @Injectable({
   providedIn: 'root',

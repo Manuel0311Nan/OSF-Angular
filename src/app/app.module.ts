@@ -15,8 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminPhotoComponent } from './pages/admin-photo/admin-photo.component';
-import { AdminNewsComponent } from './pages/admin-news/admin-news.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,9 @@ import { AdminNewsComponent } from './pages/admin-news/admin-news.component';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    InfiniteScrollModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

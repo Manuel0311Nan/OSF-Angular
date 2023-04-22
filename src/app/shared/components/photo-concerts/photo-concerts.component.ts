@@ -8,6 +8,7 @@ import { Photo } from 'src/app/interfaces/Photo-Interface';
   styleUrls: ['./photo-concerts.component.css']
 })
 export class PhotoConcertsComponent implements OnInit, AfterViewInit {
+
   @Input()
   photos: Photo[] = [];
   public mySwiper!: Swiper;
